@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+:root {
+    --dark-blue: #055858; /* Dark blue background */
+    --lighter-blue: #0d2c50; /* Slightly lighter blue */
+    --blue: #1093c2; /* Blue accent color */
+    --purple: #8a2be2; /* Vibrant purple */
+    --light-grey: #bfbfbf; /* Light grey text color */
+    --whitesh: #f5f5f5; /* Off-white */
+    --rubik-font: "Montserrat", sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: var(--rubik-font);
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+img {
+    display: block;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.movies-pagination {
+    display: flex;
+    flex-wrap: wrap; /* Ensure pagination items wrap on smaller screens */
+    justify-content: center; /* Center align pagination items */
+    list-style: none;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+.movies-pagination li {
+    width: 2.5rem; /* Decrease width of pagination items */
+    height: 2.5rem; /* Decrease height of pagination items */
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%; /* Make pagination items circular */
+    background-color: var(--lighter-blue); /* Use lighter blue background */
+}
+.movies-pagination li a {
+    display: flex;
+    justify-content: center; /* Center align text inside pagination items */
+    align-items: center; /* Center align text inside pagination items */
+    font-size: 1rem; /* Decrease font size */
+    transition: all ease-in-out 0.2s;
+    color: var(--whitesh); /* White text */
+}
+.movies-pagination li.selected {
+    background-color: var(--purple); /* Use purple background for selected item */
+}
+
+@media (hover: hover) {
+    .movies-pagination li a:hover {
+        color: var(--purple); /* Change text color on hover */
+    }
+}
